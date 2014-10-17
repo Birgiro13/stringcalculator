@@ -37,6 +37,10 @@ public class CalculatorTest {
 	public void testWithNewline(){
 		assertEquals(4, Calculator.add("1\n3"));
 	}
-
-
+	
+	@Test
+        public void testWithDelimiter() 
+        {
+                assertEquals(3, Calculator.add("\\;\n1;2"));
+        }
 }

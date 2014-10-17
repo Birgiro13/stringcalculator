@@ -13,6 +13,20 @@ public class Calculator {
 		{
 			return sum(splitNewLine(text));
 		}
+		else if (text.startsWith("\\"))
+		{
+			
+
+ 
+			if(text.contains("\n"))
+			{
+				return sum(splitNewLine(text));
+			}
+			else
+			{
+				return sum(splitNumbers(text));
+			}
+		}
 		else
 			return toInt(text);
 	}
@@ -29,7 +43,7 @@ public class Calculator {
 	{
 		return numbers.split("\n");
 	}
-      
+ 
     private static int sum(String[] numbers){
  	    int total = 0;
         for(String number : numbers){
@@ -38,6 +52,4 @@ public class Calculator {
 		return total;
     }
 	
-
-
 }
