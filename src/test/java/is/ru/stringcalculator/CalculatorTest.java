@@ -50,4 +50,9 @@ public class CalculatorTest {
 		assertNotNull(exception);
                 assertEquals("Negatives not allowed: [-4, -5]"), ex.getMessage());
         }
+	@Test
+	public void testWithDelimiter() 
+	{
+		assertEquals(3, Calculator.add("\\;\n1;2"));
+	}
 }
