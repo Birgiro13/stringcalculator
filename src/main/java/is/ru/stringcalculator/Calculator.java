@@ -15,8 +15,6 @@ public class Calculator {
 		}
 		else if (text.startsWith("\\"))
 		{
-			
-
  
 			if(text.contains("\n"))
 			{
@@ -27,6 +25,22 @@ public class Calculator {
 				return sum(splitNumbers(text));
 			}
 		}
+		else if (text.contains("-"))
+		{
+			List neativeNum = new ArrayList();
+			for (String number : text)
+			{
+				int num = toInt(number.trim());
+				if (number < 0)
+				{
+					negativeNum.add(num);)
+				}
+			}
+			if (negativeNum.size() >  0)
+			{
+				throw new RuntimeExeption("Negatives not allowed: " + negativeNum.toString());
+			}
+		[
 		else
 			return toInt(text);
 	}

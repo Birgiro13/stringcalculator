@@ -39,8 +39,15 @@ public class CalculatorTest {
 	}
 	
 	@Test
-        public void testWithDelimiter() 
+        public void testWitwNegative() 
         {
-                assertEquals(3, Calculator.add("\\;\n1;2"));
+		RuntimeExeption ex = null;
+		try
+		{
+			StingCalculator.add("2,-4,3-5");
+		} catch (RuntimeExeption e)
+		{ exeption = e;
+		assertNotNull(exception);
+                assertEquals("Negatives not allowed: [-4, -5]"), ex.getMessage());
         }
 }
